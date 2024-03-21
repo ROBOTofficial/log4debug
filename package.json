@@ -1,8 +1,9 @@
 {
   "name": "log4debug",
   "version": "1.0.3",
-  "description": "",
+  "description": "JavaScript and TypeScript's Log Package",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {
     "acorn": "^8.11.3",
     "acorn-walk": "^8.3.2",
@@ -19,7 +20,7 @@
     "typescript": "^5.4.3"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -d",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -32,6 +33,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ROBOTofficial/js4debug.git"
+    "url": "https://github.com/ROBOTofficial/js4debug.git",
+    "directory": "dist/index.js"
   }
 }
