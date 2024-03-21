@@ -1,10 +1,23 @@
 type options = (content:string) => string
+let NormalConsole = console.log
 function set(...func:options[]) {
     let newConsole = console.log
     console.log = (...data: any[]) => {
         let content = data.join(" ")
         if (func.length !== 0) for (let i = func.length-1; -1 < i; i--) content = func[i](content)
         newConsole(content)
+    }
+}
+function setClear(timeout:number|null,content:string|null,...func:options[]) {
+    let newClear = console.clear
+    console.clear = () => {
+        if (content !== null) if (func.length !== 0) {
+            for (let i = func.length-1; -1 < i; i--) content = func[i](content)
+            NormalConsole(content)
+        } else console.log(content)
+        setTimeout(() => {
+            newClear()
+        }, timeout === null ? 0 : timeout);
     }
 }
 function defaultTemplate(content:string):string {
@@ -43,6 +56,7 @@ const colors = {
 
 export default {
     set,
+    setClear,
     defaultTemplate,
     defaultFrameTemplate,
 
