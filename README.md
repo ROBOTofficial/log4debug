@@ -88,5 +88,13 @@ Don't worry, the color will not change except for the area enclosed by the funct
 
 ![image](https://github.com/ROBOTofficial/log4debug/assets/101011695/936ef867-6256-42f8-b039-908dd8c47f2e)
 
+### Related Sites
+
+https://www.npmjs.com/package/log4debug
+
+### Developer Contact
+- `DiscordID:`robot_official
+- `TwitterID:`robot_neet
+
 ### Attention
 All written using [Deepl translation](https://www.deepl.com/ja/translator)
