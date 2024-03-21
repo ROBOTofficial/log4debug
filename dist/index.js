@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+let NormalConsole = console.log;
 function set(...func) {
     let newConsole = console.log;
     console.log = (...data) => {
@@ -8,6 +9,22 @@ function set(...func) {
             for (let i = func.length - 1; -1 < i; i--)
                 content = func[i](content);
         newConsole(content);
+    };
+}
+function setClear(timeout, content, ...func) {
+    let newClear = console.clear;
+    console.clear = () => {
+        if (content !== null)
+            if (func.length !== 0) {
+                for (let i = func.length - 1; -1 < i; i--)
+                    content = func[i](content);
+                NormalConsole(content);
+            }
+            else
+                console.log(content);
+        setTimeout(() => {
+            newClear();
+        }, timeout === null ? 0 : timeout);
     };
 }
 function defaultTemplate(content) {
@@ -44,6 +61,7 @@ const colors = {
 };
 exports.default = {
     set,
+    setClear,
     defaultTemplate,
     defaultFrameTemplate,
     colors

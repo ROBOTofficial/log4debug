@@ -1,9 +1,11 @@
 type options = (content: string) => string;
 declare function set(...func: options[]): void;
+declare function setClear(timeout: number | null, content: string | null, ...func: options[]): void;
 declare function defaultTemplate(content: string): string;
 declare function defaultFrameTemplate(content: string): string;
 declare const _default: {
     set: typeof set;
+    setClear: typeof setClear;
     defaultTemplate: typeof defaultTemplate;
     defaultFrameTemplate: typeof defaultFrameTemplate;
     colors: {
