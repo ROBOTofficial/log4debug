@@ -98,3 +98,5 @@ https://www.npmjs.com/package/log4debug
 
 ### Attention
 All written using [Deepl translation](https://www.deepl.com/ja/translator)
+
+
