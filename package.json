@@ -1,6 +1,6 @@
 {
   "name": "log4debug",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "description": "JavaScript and TypeScript's Log Package",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
