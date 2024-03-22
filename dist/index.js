@@ -71,4 +71,4 @@ class log4debug {
     }
 }
 log4debug.color = color;
-exports.default = log4debug;
+module.exports = log4debug;
