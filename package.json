@@ -1,6 +1,6 @@
 {
   "name": "log4debug",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "JavaScript and TypeScript's Log Package",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,14 +21,15 @@
     "typescript": "^5.4.3"
   },
   "scripts": {
-    "build": "tsc -d true -m commonjs",
+    "build": "tsc -d",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
     "logger",
     "log",
     "debugger",
-    "debug"
+    "debug",
+    "log4debug"
   ],
   "author": "robot_official",
   "license": "MIT",

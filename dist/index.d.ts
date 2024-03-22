@@ -1,22 +1,19 @@
 type options = (content: string) => string;
-declare function set(...func: options[]): void;
-declare function setClear(timeout: number | null, content: string | null, ...func: options[]): void;
-declare function defaultTemplate(content: string): string;
-declare function defaultFrameTemplate(content: string): string;
-declare const _default: {
-    set: typeof set;
-    setClear: typeof setClear;
-    defaultTemplate: typeof defaultTemplate;
-    defaultFrameTemplate: typeof defaultFrameTemplate;
-    colors: {
-        black: (content: string) => string;
-        red: (content: string) => string;
-        green: (content: string) => string;
-        yellow: (content: string) => string;
-        blue: (content: string) => string;
-        magenta: (content: string) => string;
-        cyan: (content: string) => string;
-        white: (content: string) => string;
-    };
-};
-export default _default;
+declare class color {
+    static black(content: string): string;
+    static red(content: string): string;
+    static green(content: string): string;
+    static yellow(content: string): string;
+    static blue(content: string): string;
+    static magenta(content: string): string;
+    static cyan(content: string): string;
+    static white(content: string): string;
+}
+export default class log4debug {
+    static set(...func: options[]): void;
+    static setClear(timeout: number | null, content: string | null, ...func: options[]): void;
+    static defaultTemplate(content: string): string;
+    static defaultFrameTemplate(content: string): string;
+    static color: typeof color;
+}
+export {};
